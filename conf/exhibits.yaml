@@ -1,0 +1,22 @@
+# docker run -v $PWD/crawls:/crawls/ -v$PWD/conf:/conf/ -it webrecorder/browsertrix-crawler crawl --config /conf/exhibits.yaml
+collection: "exhibits-lib-berkeley-edu"
+#workers: 8
+saveState: always
+seeds:
+  - url: https://exhibits.lib.berkeley.edu/
+    scopeType: host
+    generateWACZ: true
+    extraHops: 1
+    exclude:
+      # spotlight/blacklight internal pages
+      - https?://exhibits.lib.berkeley.edu/.*/edit$
+      - https?://exhibits.lib.berkeley.edu/.*/track$
+      - https?://exhibits.lib.berkeley.edu/bookmarks
+      - https?://exhibits.lib.berkeley.edu/search_history
+      - https?://exhibits.lib.berkeley.edu/users/.*
+      # policy pages in the global footer
+      - https?://www.lib.berkeley.edu/about/privacy-policy
+      - http?s://dac.berkeley.edu/web-accessibility
+      - http?s://ophd.berkeley.edu/policies-and-procedures/nondiscrimination-policy-statement
+    blockRules:
+      - url: googletagmanager.com
