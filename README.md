@@ -8,4 +8,5 @@ this presumes that you've got some passing familarity with the [user guide](http
 
 ## todos
 
-* [ ] crawl config for exhibits.lib.b.e
+* [x] crawl config for exhibits.lib.b.e
+* [ ] investigate drivers for osd viewer (see [edsu's blog post](https://inkdroid.org/2022/09/12/driver/))

@@ -2,6 +2,7 @@
 collection: "exhibits-lib-berkeley-edu"
 #workers: 8
 saveState: always
+# do we want one seed per exhibit? that's how our archive-it crawl is setup
 seeds:
   - url: https://exhibits.lib.berkeley.edu/
     scopeType: host
