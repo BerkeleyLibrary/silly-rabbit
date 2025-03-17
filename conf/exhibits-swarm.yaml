@@ -1,0 +1,9 @@
+# docker run -v $PWD/crawls:/crawls/ -v$PWD/conf:/conf/ -it webrecorder/browsertrix-crawler crawl --config /conf/exhibits-swarm.yaml
+collection: "exhibits-swarm"
+workers: 3 # changeable
+saveState: always
+sitemap: https://exhibits.swarm-ewh-prod.devlib.berkeley.edu/sitemap.xml
+seeds:
+  - url: https://exhibits.swarm-ewh-prod.devlib.berkeley.edu/
+    scopeType: host
+    generateWACZ: false
